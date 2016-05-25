@@ -1,6 +1,6 @@
 - if Restaurant.all.any?
   - @restaurants.each do |restaurant|
-    = link_to restaurant.name, restaurant_path(restaurant)
+    %h2= link_to restaurant.name, restaurant_path(restaurant)
     = restaurant.description
     - if restaurant.reviews.any?
       - restaurant.reviews.each do |review|
