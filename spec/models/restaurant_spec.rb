@@ -27,7 +27,7 @@ describe 'reviews' do
       expect(review).to be_a Review
     end
 
-    it 'build a reviw associated with a specified user' do
+    it 'build a review associated with a specified user' do
       expect(review.user).to eq user
     end
 
