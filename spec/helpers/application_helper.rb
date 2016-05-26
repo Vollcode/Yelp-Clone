@@ -1,4 +1,3 @@
-# require 'rails_helper'
 
 module ApplicationHelper
   def sign_up

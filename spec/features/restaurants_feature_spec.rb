@@ -37,7 +37,6 @@ feature 'restaurants' do
       visit '/restaurants'
       click_link 'Add a restaurant'
       expect(current_path).to eq '/users/sign_in'
-      expect(page).to have_content 'Please log in first'
     end
   end
 
