@@ -36,7 +36,7 @@ feature 'restaurants' do
     scenario 'can\'t create a restaurant if not logged in' do
       visit '/restaurants'
       click_link 'Add a restaurant'
-      expect(current_path).to eq '/restaurants/new'
+      expect(current_path).to eq '/users/sign_in'
       expect(page).to have_content 'Please log in first'
     end
   end
