@@ -33,3 +33,30 @@ describe 'reviews' do
 
   end
 end
+
+describe '#average_rating' do
+
+    context 'no reviews' do
+      it "returns 'N/A' when there are no reviews" do
+        nandos = Restaurant.create(name: 'Nand\'os')
+        expect(nandos.average_rating).to eq 'N/A'
+      end
+    end
+
+    context '1 review' do
+      it 'returns that rating' do
+        shoryu = Restaurant.create(name: 'Shoryu Ramen')
+        shoryu.reviews.create(rating: 4)
+        expect(shoryu.average_rating).to eq 4
+      end
+    end
+
+    context 'multiple reviews' do
+      it 'return the average' do
+        restaurant = Restaurant.create(name: 'The Ivy')
+        restaurant.reviews.create(rating: 1)
+        restaurant.reviews.create(rating: 5)
+        expect(restaurant.average_rating).to eq 3
+      end
+    end
+end

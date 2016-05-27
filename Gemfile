@@ -18,6 +18,7 @@ gem 'haml'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'dotenv-rails'
+gem 'paperclip'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

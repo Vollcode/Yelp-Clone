@@ -23,7 +23,3 @@ class ReviewsController < ApplicationController
     params.require(:review).permit(:thoughts, :rating)
   end
 end
-#
-# def restaurant_params
-#   params.require(:restaurant).permit(:name, :description)
-# end
